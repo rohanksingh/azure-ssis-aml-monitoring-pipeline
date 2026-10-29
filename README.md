@@ -4,8 +4,6 @@
 
 A hybrid cloud-to-local **anti-money laundering (AML) transaction monitoring** demonstration built with **Azure Blob Storage, AzCopy, SQL Server Integration Services (SSIS), and SQL Server**. It ingests a synthetic transaction CSV, applies Bronze/Silver/Gold transformations, and generates explainable, rule-based alerts.
 
-> **Project status:** Version 1 is implemented in a single SSIS package (`Package.dtsx`). Separating Bronze, Silver, and Gold into independently orchestrated packages is a planned enhancement.
-
 ## Architecture
 
 ```mermaid
