@@ -1,0 +1,2556 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/29/2026 7:59:31 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ROHAN"
+  DTS:CreatorName="ROHAN\rohan"
+  DTS:DTSID="{B1291CD3-614E-45CA-B5E6-92B44E042ACA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{4D16E9C6-DCDA-4BCE-87E1-23B3782781D8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CM_AML_CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CCCE3910-FA8A-4138-A110-1BB93E9C3837}"
+      DTS:ObjectName="CM_AML_CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\AML_Project\Staging\HI_Small.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Timestamp"
+              DTS:DTSID="{2DAD98AB-EDA1-4542-95FA-275A5CC19555}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="From Bank"
+              DTS:DTSID="{2AA70530-96AD-4E3D-89DB-07D31901A35D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Account"
+              DTS:DTSID="{7E0246ED-CC60-4C12-9002-BB8C30AF63C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="To Bank"
+              DTS:DTSID="{F13D0D34-050E-408D-BB1B-E62BFB8CB916}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Account 1"
+              DTS:DTSID="{0446975F-85DC-417C-87A1-A1A7EF3B7373}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Amount Received"
+              DTS:DTSID="{701CEC36-3AF2-4394-9F7E-1D2CD1F063F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Receiving Currency"
+              DTS:DTSID="{B33A0B1C-F28E-4BC6-A2C3-82A61DA16683}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Amount Paid"
+              DTS:DTSID="{31345234-FA46-4BAC-98C5-95BD6AC42C7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Payment Currency"
+              DTS:DTSID="{EEF9E450-27BE-42BB-87F4-B707B2545FA2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Payment Format"
+              DTS:DTSID="{2EF48AEB-FB3F-4680-B520-7CD46594D81E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Is Laundering"
+              DTS:DTSID="{74E053B7-B384-4C40-A6F2-BCE2C5327502}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\SQLEXPRESS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6DB094FD-1407-474A-B912-63BCCC46B772}"
+      DTS:ObjectName="localhost\SQLEXPRESS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost\SQLEXPRESS;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{6DB094FD-1407-474A-B912-63BCCC46B772}localhost\SQLEXPRESS;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\sqlexpress.AML_Cloud_ETL]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{08E343AC-34CB-45E6-9E4F-2ECE32384782}"
+      DTS:ObjectName="localhost\sqlexpress.AML_Cloud_ETL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost\sqlexpress;Initial Catalog=AML_Cloud_ETL;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{08E343AC-34CB-45E6-9E4F-2ECE32384782}localhost\sqlexpress.AML_Cloud_ETL;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[rohan/sqlexpress]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4631B97C-EF79-4E2F-9FCF-9D4C69214028}"
+      DTS:ObjectName="rohan/sqlexpress">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=rohan/sqlexpress;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{4631B97C-EF79-4E2F-9FCF-9D4C69214028}rohan/sqlexpress;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[rohan/sqlexpress 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C8405BA8-5C75-4B9E-B7D2-E6547CA606EC}"
+      DTS:ObjectName="rohan/sqlexpress 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=rohan/sqlexpress;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{C8405BA8-5C75-4B9E-B7D2-E6547CA606EC}rohan/sqlexpress 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ROHAN\SQLEXPRESS.BankingRiskDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{79606F36-DAE7-4924-B030-6EF9C82AE767}"
+      DTS:ObjectName="ROHAN\SQLEXPRESS.BankingRiskDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ROHAN\SQLEXPRESS;Initial Catalog=AML_Cloud_ETL;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{79606F36-DAE7-4924-B030-6EF9C82AE767}ROHAN\SQLEXPRESS.BankingRiskDW;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BAD0AAC7-483A-4367-82D7-45F9E7796D8E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="KnownLaunderingCasesFlagged">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4F11F347-6BCD-4C60-A1BC-849B09F259AB}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalHighValueAlerts">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Load_AML_Bronze"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A2F9DD8B-2D65-4687-BE30-AB41BEE89010}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Load_AML_Bronze"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Load_AML_Bronze\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[Timestamp]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Timestamp"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Timestamp]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[From Bank]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="From Bank"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[From Bank]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[Account]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Account"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Account]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[To Bank]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="To Bank"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[To Bank]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[Account 1]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Account 1"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Account 1]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[Amount Received]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Amount Received"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Amount Received]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[Receiving Currency]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Receiving Currency"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Receiving Currency]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[Amount Paid]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Amount Paid"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Amount Paid]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[Payment Currency]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Payment Currency"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Payment Currency]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[Payment Format]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Payment Format"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Payment Format]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input].Columns[Is Laundering]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Is Laundering"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Is Laundering]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_Timestamp]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_Timestamp]"
+                      name="UC_Timestamp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Timestamp]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_FromBank]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_FromBank]"
+                      name="UC_FromBank"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[From Bank]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_Account]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_Account]"
+                      name="UC_Account"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Account]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_ToBank]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_ToBank]"
+                      name="UC_ToBank"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[To Bank]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_Account1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_Account1]"
+                      name="UC_Account1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Account 1]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_AmountReceived]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_AmountReceived]"
+                      name="UC_AmountReceived"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Amount Received]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_ReceivingCurrency]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_ReceivingCurrency]"
+                      name="UC_ReceivingCurrency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Receiving Currency]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_AmountPaid]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_AmountPaid]"
+                      name="UC_AmountPaid"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Amount Paid]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_PaymentCurrency]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_PaymentCurrency]"
+                      name="UC_PaymentCurrency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Payment Currency]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_PaymentFormat]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_PaymentFormat]"
+                      name="UC_PaymentFormat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Payment Format]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_IsLaundering]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="250"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_IsLaundering]"
+                      name="UC_IsLaundering"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Is Laundering]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_AML_Bronze\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_AML_Bronze\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CM_AML_CSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[CM_AML_CSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Timestamp]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Timestamp]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Timestamp]"
+                      name="Timestamp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[From Bank]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[From Bank]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[From Bank]"
+                      name="From Bank"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Account]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Account]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Account]"
+                      name="Account"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[To Bank]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[To Bank]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[To Bank]"
+                      name="To Bank"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Account 1]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Account 1]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Account 1]"
+                      name="Account 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Amount Received]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Amount Received]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Amount Received]"
+                      name="Amount Received"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Receiving Currency]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Receiving Currency]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Receiving Currency]"
+                      name="Receiving Currency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Amount Paid]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Amount Paid]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Amount Paid]"
+                      name="Amount Paid"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Payment Currency]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Payment Currency]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Payment Currency]"
+                      name="Payment Currency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Payment Format]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Payment Format]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Payment Format]"
+                      name="Payment Format"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Is Laundering]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Is Laundering]"
+                      length="50"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].Columns[Is Laundering]"
+                      name="Is Laundering"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Timestamp]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Timestamp" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[From Bank]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="From Bank" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Account]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Account" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[To Bank]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="To Bank" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Account 1]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Account 1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Amount Received]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Amount Received" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Receiving Currency]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Receiving Currency" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Amount Paid]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Amount Paid" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Payment Currency]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Payment Currency" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Payment Format]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Payment Format" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Is Laundering]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="Is Laundering" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Load_AML_Bronze\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[bronze].[AML_Transactions_Raw]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost\sqlexpress.AML_Cloud_ETL]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost\sqlexpress.AML_Cloud_ETL]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_Timestamp]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_Timestamp"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Timestamp]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_Timestamp]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_FromBank]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_FromBank"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[From Bank]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_FromBank]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_Account]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_Account"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Account]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_Account]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_ToBank]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_ToBank"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[To Bank]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_ToBank]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_Account1]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_Account1"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Account.1]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_Account1]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_AmountReceived]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_AmountReceived"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Amount Received]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_AmountReceived]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_ReceivingCurrency]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_ReceivingCurrency"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Receiving Currency]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_ReceivingCurrency]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_AmountPaid]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_AmountPaid"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Amount Paid]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_AmountPaid]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_PaymentCurrency]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_PaymentCurrency"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment Currency]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_PaymentCurrency]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_PaymentFormat]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_PaymentFormat"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment Format]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_PaymentFormat]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UC_IsLaundering]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="UC_IsLaundering"
+                      externalMetadataColumnId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Is Laundering]"
+                      lineageId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output].Columns[UC_IsLaundering]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RawTransactionID]"
+                      dataType="i8"
+                      name="RawTransactionID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Timestamp]"
+                      dataType="wstr"
+                      length="255"
+                      name="Timestamp" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[From Bank]"
+                      dataType="wstr"
+                      length="255"
+                      name="From Bank" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Account]"
+                      dataType="wstr"
+                      length="255"
+                      name="Account" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[To Bank]"
+                      dataType="wstr"
+                      length="255"
+                      name="To Bank" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Account.1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Account.1" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Amount Received]"
+                      dataType="wstr"
+                      length="255"
+                      name="Amount Received" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Receiving Currency]"
+                      dataType="wstr"
+                      length="255"
+                      name="Receiving Currency" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Amount Paid]"
+                      dataType="wstr"
+                      length="255"
+                      name="Amount Paid" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment Currency]"
+                      dataType="wstr"
+                      length="255"
+                      name="Payment Currency" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment Format]"
+                      dataType="wstr"
+                      length="255"
+                      name="Payment Format" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Is Laundering]"
+                      dataType="wstr"
+                      length="255"
+                      name="Is Laundering" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoadTimestamp]"
+                      dataType="dbTimeStamp2"
+                      name="LoadTimestamp"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Load_AML_Bronze.Paths[Data Conversion Output]"
+              endId="Package\DFT_Load_AML_Bronze\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT_Load_AML_Bronze\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT_Load_AML_Bronze.Paths[Flat File Source Output]"
+              endId="Package\DFT_Load_AML_Bronze\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT_Load_AML_Bronze\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Download_AML_Data_From_Azure"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{ECFC9DCA-8C51-4172-AE3A-85B1C003A347}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Download_AML_Data_From_Azure"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Tools\AzCopy\azcopy.exe"
+          Arguments="copy &quot;https://amlssisstorage2026.blob.core.windows.net/aml-transactions/HI_Small.csv&quot; &quot;C:\AML_Project\Staging&quot; --overwrite=true"
+          WorkingDirectory="C:\AML_Project\Staging" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SCRIPT_Display_AML_Alert_Results"
+      DTS:CreationName="Microsoft.ScriptTask"
+      DTS:Description="Script Task"
+      DTS:DTSID="{331181F6-76BB-4E0F-90E1-AD5E57AB7CEA}"
+      DTS:ExecutableType="Microsoft.ScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SCRIPT_Display_AML_Alert_Results"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_be367897db2549039f2b602bda1452a8"
+          VSTAMajorVersion="17"
+          VSTAMinorVersion="0"
+          Language="CSharp"
+          ReadOnlyVariables="User::KnownLaunderingCasesFlagged,User::TotalHighValueAlerts">
+          <ProjectItem
+            Name="ST_be367897db2549039f2b602bda1452a8.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29C0C7AE-3B2A-4F11-8197-7AEEDB099377}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_be367897db2549039f2b602bda1452a8</RootNamespace>
+    <AssemblyName>ST_be367897db2549039f2b602bda1452a8</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST170</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.resx"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
+            Name="ScriptMain.cs"
+            Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
+/* The Script Task allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services control flow. 
+ * 
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script task. */
+#endregion
+
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Runtime;
+using System.Windows.Forms;
+#endregion
+
+namespace ST_be367897db2549039f2b602bda1452a8
+{
+    /// <summary>
+    /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+    /// or parent of this class.
+    /// </summary>
+	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
+	public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+	{
+        #region Help:  Using Integration Services variables and parameters in a script
+        /* To use a variable in this script, first ensure that the variable has been added to 
+         * either the list contained in the ReadOnlyVariables property or the list contained in 
+         * the ReadWriteVariables property of this script task, according to whether or not your
+         * code needs to write to the variable.  To add the variable, save this script, close this instance of
+         * Visual Studio, and update the ReadOnlyVariables and 
+         * ReadWriteVariables properties in the Script Transformation Editor window.
+         * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+         * 
+         * Example of reading from a variable:
+         *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
+         * 
+         * Example of writing to a variable:
+         *  Dts.Variables["User::myStringVariable"].Value = "new value";
+         * 
+         * Example of reading from a package parameter:
+         *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
+         *  
+         * Example of reading from a project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
+         * 
+         * Example of reading from a sensitive project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
+         * */
+
+        #endregion
+
+        #region Help:  Firing Integration Services events from a script
+        /* This script task can fire events for logging purposes.
+         * 
+         * Example of firing an error event:
+         *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
+         * 
+         * Example of firing an information event:
+         *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
+         * 
+         * Example of firing a warning event:
+         *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
+         * */
+        #endregion
+
+        #region Help:  Using Integration Services connection managers in a script
+        /* Some types of connection managers can be used in this script task.  See the topic 
+         * "Working with Connection Managers Programatically" for details.
+         * 
+         * Example of using an ADO.Net connection manager:
+         *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
+         *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
+         *
+         * Example of using a File connection manager
+         *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
+         *  string filePath = (string)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
+         * */
+        #endregion
+
+
+		/// <summary>
+        /// This method is called when this script task executes in the control flow.
+        /// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+        /// To open Help, press F1.
+        /// </summary>
+		
+
+        public void Main()
+        {
+            int totalAlerts = Convert.ToInt32(
+                Dts.Variables["User::TotalHighValueAlerts"].Value
+            );
+
+            int launderingFlagged = Convert.ToInt32(
+                Dts.Variables["User::KnownLaunderingCasesFlagged"].Value
+            );
+
+            string message =
+                "AML TRANSACTION MONITORING DASHBOARD\n\n" +
+                "Total Transactions Analyzed: 50,509\n" +
+                "Unique AML Alerts: " + totalAlerts.ToString("N0") + "\n" +
+                "Known Laundering Cases Detected: " + launderingFlagged + "\n\n" +
+                "Monitoring Rules:\n" +
+                "1. High Value Transaction >= 100,000\n" +
+                "2. Credit Card Transaction > 29,000";
+
+            System.Windows.Forms.MessageBox.Show(
+                message,
+                "AML Monitoring Results"
+            );
+
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
+
+        #region ScriptResults declaration
+        /// <summary>
+        /// This enum provides a convenient shorthand within the scope of this class for setting the
+        /// result of the script.
+        /// 
+        /// This code was generated automatically.
+        /// </summary>
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+	}
+}]]></ProjectItem>
+          <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_be367897db2549039f2b602bda1452a8</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_be367897db2549039f2b602bda1452a8</msb:DisplayName>
+    <msb:ProjectId>{63016AF9-A65F-4310-93C5-EEDD7D7F9C49}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_be367897db2549039f2b602bda1452a8.csproj" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="ScriptMain.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_be367897db2549039f2b602bda1452a8.Properties.Settings.get_Default():ST_be367897db2549039f2b602bda1452a8.Properties.Sett" +
+    "ings")]
+
+namespace ST_be367897db2549039f2b602bda1452a8.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_be367897db2549039f2b602bda1452a8")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("HP")]
+[assembly: AssemblyProduct("ST_be367897db2549039f2b602bda1452a8")]
+[assembly: AssemblyCopyright("Copyright @ HP 2026")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_be367897db2549039f2b602bda1452a8.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_be367897db2549039f2b602bda1452a8.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_be367897db2549039f2b602bda1452a8.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace ST_be367897db2549039f2b602bda1452a8.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_be367897db2549039f2b602bda1452a8.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <BinaryItem
+            Name="ST_be367897db2549039f2b602bda1452a8.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPaA42oAAAAAAAAAAOAAIiALATAAABIAAAAIAAAAAAAA8jAA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKAwAABPAAAAAEAAAIAEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA+BAAAAAgAAAAEgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAIAEAAAAQAAAAAYAAAAUAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAGgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADU
+MAAAAAAAAEgAAAACAAUAWCEAAJAOAAABAAAAAAAAAOgvAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABMwBQCUAAAAAQAAEQIoEAAACm8RAAAKcgEAAHBvEgAACm8T
+AAAKKBQAAAoKAigQAAAKbxEAAApyNwAAcG8SAAAKbxMAAAooFAAACgsbjRwAAAElFnJ7AABwoiUX
+EgByOAEAcCgVAAAKoiUYcj4BAHCiJRkSASgWAAAKoiUacoQBAHCiKBcAAApyPwIAcCgYAAAKJgIo
+EAAAChZvGQAACioeAigaAAAKKh4CKBsAAAoqrn4BAAAELR5ybQIAcNADAAACKBwAAApvHQAACnMe
+AAAKgAEAAAR+AQAABCoafgIAAAQqHgKAAgAABCoafgMAAAQqHgIoHwAACioucwgAAAaAAwAABCoA
+AEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAAgEAAAjfgAAdAQAAKQFAAAjU3Ry
+aW5ncwAAAAAYCgAA4AIAACNVUwD4DAAAEAAAACNHVUlEAAAACA0AAIgBAAAjQmxvYgAAAAAAAAAC
+AAABVx2iAQkDAAAA+gEzABYAAAEAAAAiAAAABQAAAAYAAAAJAAAAAQAAAB8AAAACAAAAEAAAAAEA
+AAACAAAAAwAAAAQAAAABAAAABQAAAAEAAAABAAAAAAB9AwEAAAAAAAYALQJNBAYAvAJNBAYAeQE6
+BA8AwQQAAAYApgH7AwYAEAL7AwYA8QH7AwYAowL7AwYATQL7AwYAZgL7AwYAvQH7AwYA2AHqAgoA
+gQIsAwoA+AAsAwYAtQOuAwYAXAE6BAYAUAWuAwYAHQRtBAYADQTmAw4ALAFnAw4AjQFnAw4AFAHR
+AwYAQQFNBAoAVQMsAxIAAwWjABIAdgCjAAYAfwWuAwYABgOuAwYAAwCuAxYAjAUWBRYAYwUWBQYA
+wwCuAwYAfwCuAwYAmwX7AwAAAAAtAAAAAAABAAEAAQAQAMYDCQA5AAEAAQAAABAAdATQBEUAAQAD
+AAABEAANBdAEWQADAAcAAwEAADsFAAA9AAQACgARALoDggARAOgAhgARAGYAigAGBlUAjgBWgCsF
+kQBWgMgAkQBQIAAAAACGAMwDBgABAPAgAAAAAIYYLQQGAAEA+CAAAAAAgxgtBAYAAQAAIQAAAACT
+CBkElQABACwhAAAAAJMI0ACaAAEAMyEAAAAAkwjcAJ8AAQA7IQAAAACWCFcFpQACAEIhAAAAAIYY
+LQQGAAIASiEAAAAAkRgzBKoAAgAAAAEA5AIJAC0EAQARAC0EBgAZAC0ECgApAC0EEAAxAC0EEAA5
+AC0EEABBAC0EEABJAC0EEABRAC0EEABZAC0EEABhAC0EEABpAC0EBgCBAC0EBgCpAC0EFQC5AC0E
+BgBxADMFIADBAP8EJQDJAKUDKgDRANoCMADZAAEANADpAAQDOQDpAAQDPgDhAEkFQgDxAIcFSADB
+AHAFAQBxAC0EBgCJAC0EBgABAZEATwABAZcFWACRAC0EXgCxAC0EBgAIABQAeAAIABgAfQApAHMA
+5QAuAAsAvQAuABMAxgAuABsA5QAuACMA7gAuACsAFwEuADMAFwEuADsAHQEuAEMA7gAuAEsAJQEu
+AFMAFwEuAFsAPgFDAGMAfQBJAHMA5QBhAHsAfQBjAGsAfQAbAAMAAQAEAAMAAAAdBK4AAADwALMA
+AABbBbgAAgAEAAMAAgAFAAUAAQAGAAUAAgAHAAcABIAAAAEAAABGJhteAAAAAAAACQAAAAQAAAAA
+AAAAAAAAAGYAXQAAAAAAEQAAAAAAAAAAAAAAbwANAwAAAAAEAAAAAAAAAAAAAABmAK4DAAAAABEA
+AAAAAAAAAAAAAG8ANgAAAAAABAAAAAAAAAAAAAAAZgAWBQAAAAAAAAAAAQAAAH4EAAAFAAIAAAAA
+AABUb0ludDMyAFNUX2JlMzY3ODk3ZGIyNTQ5MDM5ZjJiNjAyYmRhMTQ1MmE4ADxNb2R1bGU+AE1p
+Y3Jvc29mdC5TcWxTZXJ2ZXIuTWFuYWdlZERUUwB2YWx1ZV9fAG1zY29ybGliAGRlZmF1bHRJbnN0
+YW5jZQBWYXJpYWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBNaWNyb3Nv
+ZnQuU3FsU2VydmVyLkR0cy5SdW50aW1lAFR5cGUARmFpbHVyZQBnZXRfQ3VsdHVyZQBzZXRfQ3Vs
+dHVyZQByZXNvdXJjZUN1bHR1cmUAVlNUQVJUU2NyaXB0T2JqZWN0TW9kZWxCYXNlAEFwcGxpY2F0
+aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0
+cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBF
+ZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRy
+YWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1
+cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25S
+ZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5
+cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tFbnRyeVBvaW50QXR0cmlidXRlAEFzc2VtYmx5
+Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBnZXRfVmFsdWUA
+dmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBUb1N0cmluZwBNaWNyb3NvZnQuU3FsU2Vy
+dmVyLlNjcmlwdFRhc2sATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuVGFza3MuU2NyaXB0VGFzawBT
+Y3JpcHRPYmplY3RNb2RlbABTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU1RfYmUzNjc4OTdkYjI1NDkw
+MzlmMmI2MDJiZGExNDUyYTguZGxsAGdldF9JdGVtAFN5c3RlbQBFbnVtAHJlc291cmNlTWFuAFNj
+cmlwdE1haW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVt
+LlJlZmxlY3Rpb24AQ3VsdHVyZUluZm8AZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IA
+U3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVt
+LlJlc291cmNlcwBTVF9iZTM2Nzg5N2RiMjU0OTAzOWYyYjYwMmJkYTE0NTJhOC5Qcm9wZXJ0aWVz
+LlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU1RfYmUzNjc4OTdkYjI1NDkwMzlm
+MmI2MDJiZGExNDUyYTguUHJvcGVydGllcwBnZXRfVmFyaWFibGVzAFNldHRpbmdzAFN5c3RlbS5X
+aW5kb3dzLkZvcm1zAFN1Y2Nlc3MAZ2V0X0R0cwBTY3JpcHRSZXN1bHRzAENvbmNhdABPYmplY3QA
+Z2V0X0RlZmF1bHQARGlhbG9nUmVzdWx0AHNldF9UYXNrUmVzdWx0AENvbnZlcnQAU2hvdwBNZXNz
+YWdlQm94AGdldF9Bc3NlbWJseQAANVUAcwBlAHIAOgA6AFQAbwB0AGEAbABIAGkAZwBoAFYAYQBs
+AHUAZQBBAGwAZQByAHQAcwAAQ1UAcwBlAHIAOgA6AEsAbgBvAHcAbgBMAGEAdQBuAGQAZQByAGkA
+bgBnAEMAYQBzAGUAcwBGAGwAYQBnAGcAZQBkAACAu0EATQBMACAAVABSAEEATgBTAEEAQwBUAEkA
+TwBOACAATQBPAE4ASQBUAE8AUgBJAE4ARwAgAEQAQQBTAEgAQgBPAEEAUgBEAAoACgBUAG8AdABh
+AGwAIABUAHIAYQBuAHMAYQBjAHQAaQBvAG4AcwAgAEEAbgBhAGwAeQB6AGUAZAA6ACAANQAwACwA
+NQAwADkACgBVAG4AaQBxAHUAZQAgAEEATQBMACAAQQBsAGUAcgB0AHMAOgAgAAAFTgAwAABFCgBL
+AG4AbwB3AG4AIABMAGEAdQBuAGQAZQByAGkAbgBnACAAQwBhAHMAZQBzACAARABlAHQAZQBjAHQA
+ZQBkADoAIAAAgLkKAAoATQBvAG4AaQB0AG8AcgBpAG4AZwAgAFIAdQBsAGUAcwA6AAoAMQAuACAA
+SABpAGcAaAAgAFYAYQBsAHUAZQAgAFQAcgBhAG4AcwBhAGMAdABpAG8AbgAgAD4APQAgADEAMAAw
+ACwAMAAwADAACgAyAC4AIABDAHIAZQBkAGkAdAAgAEMAYQByAGQAIABUAHIAYQBuAHMAYQBjAHQA
+aQBvAG4AIAA+ACAAMgA5ACwAMAAwADAAAC1BAE0ATAAgAE0AbwBuAGkAdABvAHIAaQBuAGcAIABS
+AGUAcwB1AGwAdABzAABxUwBUAF8AYgBlADMANgA3ADgAOQA3AGQAYgAyADUANAA5ADAAMwA5AGYA
+MgBiADYAMAAyAGIAZABhADEANAA1ADIAYQA4AC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBz
+AG8AdQByAGMAZQBzAAAAAeiSCX/EEkyWDLMn4H2iKQAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQER
+UQQHAggIBCAAEmEEIAASZQUgARJpHAMgABwEAAEIHAQgAQ4OAyAADgUAAQ4dDgYAAhF9Dg4IAAES
+gIERgIUFIAASgIkHIAIBDhKAiQi3elxWGTTgiQiJhF3NgIDMkQQAAAAABAEAAAADBhJJAwYSTQMG
+EhACBggDBhEUBAAAEkkEAAASTQUAAQESTQQAABIQAwAAAQQIABJJBAgAEk0ECAASEAgBAAgAAAAA
+AB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU1RfYmUzNjc4OTdk
+YjI1NDkwMzlmMmI2MDJiZGExNDUyYTgAAAUBAAAAAAcBAAJIUAAAGAEAE0NvcHlyaWdodCBAIEhQ
+IDIwMjYAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxh
+eU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43tAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2Vz
+LlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRy
+YWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50
+aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAMgwAAAAAAAAAAAAAOIwAAAAIAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAADUMAAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxs
+AAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAA
+AEgAAABYQAAAIgQAAAAAAAAAAAAAIgQ0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8A
+AAAAAL0E7/4AAAEAAAABABteRiYAAAEAG15GJj8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABE
+AAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8A
+bgAAAAAAAACwBIIDAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAF4DAAABADAAMAAw
+ADAAMAA0AGIAMAAAABoAAQABAEMAbwBtAG0AZQBuAHQAcwAAAAAAAAAmAAMAAQBDAG8AbQBwAGEA
+bgB5AE4AYQBtAGUAAAAAAEgAUAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBv
+AG4AAAAAAFMAVABfAGIAZQAzADYANwA4ADkANwBkAGIAMgA1ADQAOQAwADMAOQBmADIAYgA2ADAA
+MgBiAGQAYQAxADQANQAyAGEAOAAAAD4ADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAu
+ADAALgA5ADcAOQA4AC4AMgA0ADAAOQAxAAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0A
+ZQAAAFMAVABfAGIAZQAzADYANwA4ADkANwBkAGIAMgA1ADQAOQAwADMAOQBmADIAYgA2ADAAMgBi
+AGQAYQAxADQANQAyAGEAOAAuAGQAbABsAAAATAAUAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcA
+aAB0AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAASABQACAAMgAwADIANgAAACoAAQABAEwAZQBn
+AGEAbABUAHIAYQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYA
+aQBsAGUAbgBhAG0AZQAAAFMAVABfAGIAZQAzADYANwA4ADkANwBkAGIAMgA1ADQAOQAwADMAOQBm
+ADIAYgA2ADAAMgBiAGQAYQAxADQANQAyAGEAOAAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMA
+dABOAGEAbQBlAAAAAABTAFQAXwBiAGUAMwA2ADcAOAA5ADcAZABiADIANQA0ADkAMAAzADkAZgAy
+AGIANgAwADIAYgBkAGEAMQA0ADUAMgBhADgAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMA
+aQBvAG4AAAAxAC4AMAAuADkANwA5ADgALgAyADQAMAA5ADEAAAAAAEYADwABAEEAcwBzAGUAbQBi
+AGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADkANwA5ADgALgAyADQAMAA5ADEAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADAAAAPQwAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
+        </ScriptProject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Check_Gold_Alerts"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0CB8B2AA-2D72-4369-A84D-955954AB179E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Check_Gold_Alerts"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{08E343AC-34CB-45E6-9E4F-2ECE32384782}"
+          SQLTask:SqlStatementSource="SELECT&#xA;    COUNT(DISTINCT RawTransactionID) AS TotalHighValueAlerts,&#xA;    COUNT(DISTINCT CASE&#xA;        WHEN IsLaundering = 1 THEN RawTransactionID&#xA;    END) AS KnownLaunderingCasesFlagged&#xA;FROM gold.AML_Transaction_Alerts;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::TotalHighValueAlerts" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="1"
+            SQLTask:DtsVariableName="User::KnownLaunderingCasesFlagged" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Clear_AML_Bronze"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5C45658D-351E-4000-A04A-E1F284E8F991}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Clear_AML_Bronze"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{08E343AC-34CB-45E6-9E4F-2ECE32384782}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE bronze.AML_Transactions_Raw;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Create_AML_Bronze_Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C7ABA5BF-06E5-48F5-A070-379CA99386A9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Create_AML_Bronze_Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{08E343AC-34CB-45E6-9E4F-2ECE32384782}"
+          SQLTask:SqlStatementSource="IF SCHEMA_ID('bronze') IS NULL&#xA;    EXEC('CREATE SCHEMA bronze');&#xA;&#xA;IF OBJECT_ID('bronze.AML_Transactions_Raw', 'U') IS NULL&#xA;BEGIN&#xA;    CREATE TABLE bronze.AML_Transactions_Raw&#xA;    (&#xA;        RawTransactionID BIGINT IDENTITY(1,1) PRIMARY KEY,&#xA;        [Timestamp] NVARCHAR(255) NULL,&#xA;        [From Bank] NVARCHAR(255) NULL,&#xA;        [Account] NVARCHAR(255) NULL,&#xA;        [To Bank] NVARCHAR(255) NULL,&#xA;        [Account.1] NVARCHAR(255) NULL,&#xA;        [Amount Received] NVARCHAR(255) NULL,&#xA;        [Receiving Currency] NVARCHAR(255) NULL,&#xA;        [Amount Paid] NVARCHAR(255) NULL,&#xA;        [Payment Currency] NVARCHAR(255) NULL,&#xA;        [Payment Format] NVARCHAR(255) NULL,&#xA;        [Is Laundering] NVARCHAR(255) NULL,&#xA;        LoadTimestamp DATETIME2 DEFAULT SYSUTCDATETIME()&#xA;    );&#xA;END;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Create_AML_Gold_Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{ED263406-9415-4E3D-8DCF-C466B89BBC92}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Create_AML_Gold_Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{08E343AC-34CB-45E6-9E4F-2ECE32384782}"
+          SQLTask:SqlStatementSource="IF SCHEMA_ID('gold') IS NULL&#xA;    EXEC('CREATE SCHEMA gold');&#xA;&#xA;IF OBJECT_ID('gold.AML_Transaction_Alerts', 'U') IS NULL&#xA;BEGIN&#xA;    CREATE TABLE gold.AML_Transaction_Alerts&#xA;    (&#xA;        AlertID BIGINT IDENTITY(1,1) PRIMARY KEY,&#xA;        RawTransactionID BIGINT NOT NULL,&#xA;        TransactionDateTime DATETIME2 NULL,&#xA;        FromBank NVARCHAR(255) NULL,&#xA;        FromAccount NVARCHAR(255) NULL,&#xA;        ToBank NVARCHAR(255) NULL,&#xA;        ToAccount NVARCHAR(255) NULL,&#xA;        AmountPaid DECIMAL(20,2) NULL,&#xA;        PaymentCurrency NVARCHAR(50) NULL,&#xA;        AlertRule NVARCHAR(100) NOT NULL,&#xA;        AlertSeverity NVARCHAR(20) NOT NULL,&#xA;        IsLaundering BIT NULL,&#xA;        AlertCreatedAt DATETIME2&#xA;            NOT NULL DEFAULT SYSUTCDATETIME()&#xA;    );&#xA;END;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Create_AML_Silver_Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{567F916E-B246-43A4-A4D0-9E09B0B8CDE0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Create_AML_Silver_Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{08E343AC-34CB-45E6-9E4F-2ECE32384782}"
+          SQLTask:SqlStatementSource="IF SCHEMA_ID('silver') IS NULL&#xA;    EXEC('CREATE SCHEMA silver');&#xA;&#xA;IF OBJECT_ID('silver.AML_Transactions_Clean', 'U') IS NULL&#xA;BEGIN&#xA;    CREATE TABLE silver.AML_Transactions_Clean&#xA;    (&#xA;        RawTransactionID BIGINT NOT NULL PRIMARY KEY,&#xA;        TransactionDateTime DATETIME2 NULL,&#xA;        FromBank NVARCHAR(255) NULL,&#xA;        FromAccount NVARCHAR(255) NULL,&#xA;        ToBank NVARCHAR(255) NULL,&#xA;        ToAccount NVARCHAR(255) NULL,&#xA;        AmountReceived DECIMAL(20,2) NULL,&#xA;        ReceivingCurrency NVARCHAR(50) NULL,&#xA;        AmountPaid DECIMAL(20,2) NULL,&#xA;        PaymentCurrency NVARCHAR(50) NULL,&#xA;        PaymentFormat NVARCHAR(100) NULL,&#xA;        IsLaundering BIT NULL,&#xA;        SilverLoadTimestamp DATETIME2&#xA;            NOT NULL DEFAULT SYSUTCDATETIME()&#xA;    );&#xA;END;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Gold_Credit_Card_Alerts"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{69555EBE-9CC0-4DC2-95CF-A1CC1B3A5B69}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Gold_Credit_Card_Alerts"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{08E343AC-34CB-45E6-9E4F-2ECE32384782}"
+          SQLTask:SqlStatementSource="SET XACT_ABORT ON;&#xA;&#xA;BEGIN TRANSACTION;&#xA;&#xA;DELETE FROM gold.AML_Transaction_Alerts&#xA;WHERE AlertRule = 'CREDIT_CARD_HIGH_AMOUNT';&#xA;&#xA;INSERT INTO gold.AML_Transaction_Alerts&#xA;(&#xA;    RawTransactionID,&#xA;    TransactionDateTime,&#xA;    FromBank,&#xA;    FromAccount,&#xA;    ToBank,&#xA;    ToAccount,&#xA;    AmountPaid,&#xA;    PaymentCurrency,&#xA;    AlertRule,&#xA;    AlertSeverity,&#xA;    IsLaundering&#xA;)&#xA;SELECT&#xA;    RawTransactionID,&#xA;    TransactionDateTime,&#xA;    FromBank,&#xA;    FromAccount,&#xA;    ToBank,&#xA;    ToAccount,&#xA;    AmountPaid,&#xA;    PaymentCurrency,&#xA;    'CREDIT_CARD_HIGH_AMOUNT',&#xA;    'HIGH',&#xA;    IsLaundering&#xA;FROM silver.AML_Transactions_Clean&#xA;WHERE PaymentFormat = 'Credit Card'&#xA;  AND AmountPaid &gt; 29000;&#xA;&#xA;COMMIT TRANSACTION;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Gold_High_Value_Alerts"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{6F9F3448-B287-4D57-84AB-563C213B2289}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Gold_High_Value_Alerts"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{08E343AC-34CB-45E6-9E4F-2ECE32384782}"
+          SQLTask:SqlStatementSource="SET XACT_ABORT ON;&#xA;&#xA;BEGIN TRANSACTION;&#xA;&#xA;DELETE FROM gold.AML_Transaction_Alerts&#xA;WHERE AlertRule = 'HIGH_VALUE_TRANSACTION';&#xA;&#xA;INSERT INTO gold.AML_Transaction_Alerts&#xA;(&#xA;    RawTransactionID,&#xA;    TransactionDateTime,&#xA;    FromBank,&#xA;    FromAccount,&#xA;    ToBank,&#xA;    ToAccount,&#xA;    AmountPaid,&#xA;    PaymentCurrency,&#xA;    AlertRule,&#xA;    AlertSeverity,&#xA;    IsLaundering&#xA;)&#xA;SELECT&#xA;    RawTransactionID,&#xA;    TransactionDateTime,&#xA;    FromBank,&#xA;    FromAccount,&#xA;    ToBank,&#xA;    ToAccount,&#xA;    AmountPaid,&#xA;    PaymentCurrency,&#xA;    'HIGH_VALUE_TRANSACTION',&#xA;    'HIGH',&#xA;    IsLaundering&#xA;FROM silver.AML_Transactions_Clean&#xA;WHERE AmountPaid &gt;= 100000;&#xA;&#xA;COMMIT TRANSACTION;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Load_AML_Silver"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1D8F7142-AB2F-46CF-A667-E845DCC271ED}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Load_AML_Silver"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{08E343AC-34CB-45E6-9E4F-2ECE32384782}"
+          SQLTask:SqlStatementSource="SET XACT_ABORT ON;&#xA;&#xA;BEGIN TRANSACTION;&#xA;&#xA;DELETE FROM silver.AML_Transactions_Clean;&#xA;&#xA;INSERT INTO silver.AML_Transactions_Clean&#xA;(&#xA;    RawTransactionID,&#xA;    TransactionDateTime,&#xA;    FromBank,&#xA;    FromAccount,&#xA;    ToBank,&#xA;    ToAccount,&#xA;    AmountReceived,&#xA;    ReceivingCurrency,&#xA;    AmountPaid,&#xA;    PaymentCurrency,&#xA;    PaymentFormat,&#xA;    IsLaundering&#xA;)&#xA;SELECT&#xA;    RawTransactionID,&#xA;   TRY_CONVERT(DATETIME2, TRIM([Timestamp]), 101),&#xA;    NULLIF(TRIM([From Bank]), ''),&#xA;    NULLIF(TRIM([Account]), ''),&#xA;    NULLIF(TRIM([To Bank]), ''),&#xA;    NULLIF(TRIM([Account.1]), ''),&#xA;    TRY_CONVERT(DECIMAL(20,2), [Amount Received]),&#xA;    NULLIF(TRIM([Receiving Currency]), ''),&#xA;    TRY_CONVERT(DECIMAL(20,2), [Amount Paid]),&#xA;    NULLIF(TRIM([Payment Currency]), ''),&#xA;    NULLIF(TRIM([Payment Format]), ''),&#xA;    TRY_CONVERT(BIT, TRIM([Is Laundering]))&#xA;FROM bronze.AML_Transactions_Raw;&#xA;&#xA;COMMIT TRANSACTION;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F6DA3B1A-CD92-4C8E-917E-C2381589B4EA}"
+      DTS:From="Package\Download_AML_Data_From_Azure"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\SQL_Create_AML_Bronze_Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{45E9DB41-5B5E-4257-83E5-4F06291364A5}"
+      DTS:From="Package\SQL_Create_AML_Bronze_Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SQL_Clear_AML_Bronze" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{938A4CE2-CAF9-475C-9F21-EFEF857EEC88}"
+      DTS:From="Package\SQL_Clear_AML_Bronze"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\DFT_Load_AML_Bronze" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{E4716876-2EA9-4CE0-84FC-CB8C5F0267EF}"
+      DTS:From="Package\DFT_Load_AML_Bronze"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\SQL_Create_AML_Silver_Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{80740085-B5BA-4FAD-9DFE-BC0F97C4123C}"
+      DTS:From="Package\SQL_Create_AML_Silver_Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\SQL_Load_AML_Silver" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{610C1E18-4978-4C44-A56C-74D4E1962A78}"
+      DTS:From="Package\SQL_Load_AML_Silver"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\SQL_Create_AML_Gold_Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{85C32BF0-C053-4067-9C77-9E8FE2DFE934}"
+      DTS:From="Package\SQL_Create_AML_Gold_Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\SQL_Gold_High_Value_Alerts" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{BE1A5B03-3307-4B74-ABF1-381CDB75D67F}"
+      DTS:From="Package\SQL_Gold_High_Value_Alerts"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\SQL_Gold_Credit_Card_Alerts" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{36D614C8-88FA-4BDD-B033-BBD4DFC351CC}"
+      DTS:From="Package\SQL_Check_Gold_Alerts"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\SCRIPT_Display_AML_Alert_Results" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{3B2C7DAB-07AD-49CA-9AD6-A11AD6AF4EC6}"
+      DTS:From="Package\SQL_Gold_Credit_Card_Alerts"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\SQL_Check_Gold_Alerts" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\DFT_Load_AML_Bronze"
+          TopLeft="453.749975208194,217.533331820633" />
+        <NodeLayout
+          Size="242.4,41.6"
+          Id="Package\Download_AML_Data_From_Azure"
+          TopLeft="438.333309383857,21.8111109594393" />
+        <NodeLayout
+          Size="196,41.6"
+          Id="Package\SQL_Clear_AML_Bronze"
+          TopLeft="643.333298183152,164.233332191275" />
+        <NodeLayout
+          Size="233.6,41.6"
+          Id="Package\SQL_Create_AML_Bronze_Table"
+          TopLeft="440.277753722062,83.9222216386375" />
+        <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\SQL_Create_AML_Silver_Table"
+          TopLeft="658.749964007489,275.455553640072" />
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\SQL_Load_AML_Silver"
+          TopLeft="723.194404930844,352.444441993589" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="680.733309383858,42.6111109594393">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-6.85555566179505,62.1111106791981"
+              Start="0,0"
+              End="0.644444338204949,62.1111106791981">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,58.1111106791981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,58.1111106791981"
+                    Point2="22.5,62.1111106791981"
+                    Point3="18.5,62.1111106791981" />
+                  <mssgle:LineSegment
+                    End="0.644444338204949,62.1111106791981" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="557.077753722062,125.522221638637">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="184.255544461089,38.7111105526373"
+              Start="0,0"
+              End="184.255544461089,31.2111105526373">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.3555552763186" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.3555552763186"
+                    Point2="0,19.3555552763186"
+                    Point3="4,19.3555552763186" />
+                  <mssgle:LineSegment
+                    End="180.255544461089,19.3555552763186" />
+                  <mssgle:CubicBezierSegment
+                    Point1="180.255544461089,19.3555552763186"
+                    Point2="184.255544461089,19.3555552763186"
+                    Point3="184.255544461089,23.3555552763186" />
+                  <mssgle:LineSegment
+                    End="184.255544461089,31.2111105526373" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="643.333298183152,185.033332191275">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-92.7833229749572,32.4999996293586"
+              Start="0,0"
+              End="-92.7833229749572,24.9999996293586">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-88.7833229749572,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-88.7833229749572,0"
+                    Point2="-92.7833229749572,0"
+                    Point3="-92.7833229749572,4" />
+                  <mssgle:LineSegment
+                    End="-92.7833229749572,24.9999996293586" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="647.349975208194,238.333331820633">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.999988799294,37.1222218194386"
+              Start="0,0"
+              End="124.999988799294,29.6222218194386">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="120.999988799294,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="120.999988799294,0"
+                    Point2="124.999988799294,0"
+                    Point3="124.999988799294,4" />
+                  <mssgle:LineSegment
+                    End="124.999988799294,29.6222218194386" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="772.349964007489,317.055553640072">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="44.4444409233554,35.3888883535175"
+              Start="0,0"
+              End="44.4444409233554,27.8888883535175">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.6944441767587" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.6944441767587"
+                    Point2="0,17.6944441767587"
+                    Point3="4,17.6944441767587" />
+                  <mssgle:LineSegment
+                    End="40.4444409233554,17.6944441767587" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40.4444409233554,17.6944441767587"
+                    Point2="44.4444409233554,17.6944441767587"
+                    Point3="44.4444409233554,21.6944441767587" />
+                  <mssgle:LineSegment
+                    End="44.4444409233554,27.8888883535175" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="223.2,41.6"
+          Id="Package\SQL_Create_AML_Gold_Table"
+          TopLeft="406.666644447381,299.866664581431" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="723.194404930844,373.244441993589">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-93.3277604834632,-52.577777412158"
+              Start="0,0"
+              End="-85.8277604834632,-52.577777412158">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-42.6638802417316,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-42.6638802417316,0"
+                    Point2="-46.6638802417316,0"
+                    Point3="-46.6638802417316,-4" />
+                  <mssgle:LineSegment
+                    End="-46.6638802417316,-48.577777412158" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-46.6638802417316,-48.577777412158"
+                    Point2="-46.6638802417316,-52.577777412158"
+                    Point3="-50.6638802417316,-52.577777412158" />
+                  <mssgle:LineSegment
+                    End="-85.8277604834632,-52.577777412158" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\SQL_Gold_High_Value_Alerts"
+          TopLeft="400.833311432766,372.666664075189" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="514.349977940074,341.466664581431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.1999994937578"
+              Start="0,0"
+              End="0,23.6999994937578">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.6999994937578" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\SQL_Check_Gold_Alerts"
+          TopLeft="85.8333286436069,188.933332019515" />
+        <NodeLayout
+          Size="251.2,41.6"
+          Id="Package\SCRIPT_Display_AML_Alert_Results"
+          TopLeft="30.8333316486744,381.333330681589" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="154.199996812807,230.533332019515">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,150.799998662074"
+              Start="0,0"
+              End="0,143.299998662074">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,143.299998662074" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="220.8,41.6"
+          Id="Package\SQL_Gold_Credit_Card_Alerts"
+          TopLeft="236.666653735771,444.599996908307" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="510.433311432766,414.266664075189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-127.899991030329,30.3333328331177"
+              Start="0,0"
+              End="-127.899991030329,22.8333328331177">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.0690644502313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.0690644502313"
+                    Point2="0,18.0690644502313"
+                    Point3="-4,18.0690644502313" />
+                  <mssgle:LineSegment
+                    End="-123.899991030329,18.0690644502313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-123.899991030329,18.0690644502313"
+                    Point2="-127.899991030329,18.0690644502313"
+                    Point3="-127.899991030329,22.0690644502313" />
+                  <mssgle:LineSegment
+                    End="-127.899991030329,22.8333328331177" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="311.599987069104,444.599996908307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-97.4999917588306,-214.066664888792"
+              Start="0,0"
+              End="-97.4999917588306,-206.566664888792">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-102.90417007556" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-102.90417007556"
+                    Point2="0,-106.90417007556"
+                    Point3="-4,-106.90417007556" />
+                  <mssgle:LineSegment
+                    End="-93.4999917588306,-106.90417007556" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-93.4999917588306,-106.90417007556"
+                    Point2="-97.4999917588306,-106.90417007556"
+                    Point3="-97.4999917588306,-110.90417007556" />
+                  <mssgle:LineSegment
+                    End="-97.4999917588306,-206.566664888792" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Load_AML_Bronze">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\DFT_Load_AML_Bronze\Flat File Source"
+          TopLeft="471.999992966652,217.999996751547" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\DFT_Load_AML_Bronze\Data Conversion"
+          TopLeft="464.99999307096,309.99999538064" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\DFT_Load_AML_Bronze\OLE DB Destination"
+          TopLeft="453.999993234873,411.999993860722" />
+        <EdgeLayout
+          Id="Package\DFT_Load_AML_Bronze.Paths[Data Conversion Output]"
+          TopLeft="541.299993152917,351.59999538064">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.3999984800816"
+              Start="0,0"
+              End="0,52.8999984800816">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.8999984800816" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_AML_Bronze.Paths[Flat File Source Output]"
+          TopLeft="545.299993018806,259.599996751547">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.3999986290931"
+              Start="0,0"
+              End="0,42.8999986290931">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.8999986290931" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_AML_Bronze\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
